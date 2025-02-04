@@ -1,0 +1,49 @@
+# Node.js Dependencies (Backend & Frontend)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Environment Variables (Secrets)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+debug.log
+
+# Build / Output Directories
+frontend/build/
+frontend/dist/
+backend/build/
+backend/dist/
+.next/  # If using Next.js
+.vercel/ # Vercel deployment files
+
+# IDE/Editor Specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# Backup Files
+*.bak
+*.tmp
+*.log
+.env
