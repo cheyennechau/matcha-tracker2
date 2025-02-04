@@ -12,7 +12,7 @@ export default function AddPurchase() {
     if (!backendUrl) {
       alert("Backend URL is missing. Please check your environment variables.");
     }
-  }, []);
+  }, [backendUrl]);
 
   // State to hold form data
   const [formData, setFormData] = useState({
