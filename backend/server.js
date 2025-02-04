@@ -12,7 +12,18 @@ import User from "./models/User.js";  // User model
 dotenv.config(); // Load environment vars from .env
 
 const app = express();
-app.use(cors()); // Enable CORS, allow cross-origin requests
+// app.use(cors()); // Enable CORS, allow cross-origin requests
+const allowedOrigins = [
+  "http://localhost:3000",  // Allow frontend in local development
+  "https://your-frontend.vercel.app" // Allow deployed frontend
+];
+
+app.use(cors({
+  origin: allowedOrigins, 
+  credentials: true, // Needed if using cookies or authentication headers
+  methods: ["GET", "POST", "PUT", "DELETE"], // Restrict allowed HTTP methods
+}));
+
 app.use(express.json()); // Enable JSON parsing for incoming requests
 
 // Connect to MongoDB
