@@ -28,7 +28,7 @@ export default function Navbar({ isNavOpen, setIsNavOpen }: NavbarProps) {
       setIsLoggingOut(true);
       localStorage.removeItem("token");
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/logout`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
         method: "POST",
         credentials: "include",
         headers: {
